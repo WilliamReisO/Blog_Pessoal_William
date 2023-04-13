@@ -12,10 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.blogpessoal.model.Postagem;
 import com.generation.blogpessoal.repository.PostagemRepository;
-<<<<<<< HEAD
-=======
-@GetMapping
->>>>>>> 976bc4157f447cbbcb77ec2830ed82c3a2c5ba96
 @RestController
 @RequestMapping("/Postagens")
 @CrossOrigin(origins = "*",allowedHeaders = "*")
