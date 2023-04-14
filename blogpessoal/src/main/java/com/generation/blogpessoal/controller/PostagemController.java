@@ -21,8 +21,11 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.blogpessoal.model.Postagem;
 import com.generation.blogpessoal.repository.PostagemRepository;
+<<<<<<< HEAD
 
 import jakarta.validation.Valid;
+=======
+>>>>>>> 10d2003f0a3d79959a576ed2545808245b9027d6
 @RestController
 @RequestMapping("/Postagens")
 @CrossOrigin(origins = "*",allowedHeaders = "*")
@@ -35,6 +38,7 @@ private PostagemRepository postagemRepository;
 public ResponseEntity<List<Postagem>> getAll(){
 	return ResponseEntity.ok(postagemRepository.findAll());
 }
+<<<<<<< HEAD
 @GetMapping("/{id}")
 public ResponseEntity<Postagem> getById(@PathVariable Long id){
 	return postagemRepository.findById(id)
@@ -69,3 +73,6 @@ public void delete(@PathVariable Long id) {
 	postagemRepository.deleteById(id);
 }
 }
+=======
+}
+>>>>>>> 10d2003f0a3d79959a576ed2545808245b9027d6
