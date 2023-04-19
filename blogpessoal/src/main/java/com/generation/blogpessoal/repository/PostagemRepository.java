@@ -7,8 +7,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import com.generation.blogpessoal.model.Postagem;
 
-@Repository
 public interface PostagemRepository extends JpaRepository<Postagem,Long>{
+	// JPA tranforma o que digitamos em comandos no MY SQL
+	// Esse comando abaixo faz o SELECT * FROM alguma coisa no Mysql.
 	
 	public List <Postagem> findAllByTituloContainingIgnoreCase(@Param("titulo")String titulo);
 
