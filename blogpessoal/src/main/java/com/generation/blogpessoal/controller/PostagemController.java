@@ -32,7 +32,6 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository postagemRepository;
 
-
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll() {
 		return ResponseEntity.ok(postagemRepository.findAll());
@@ -45,14 +44,16 @@ public class PostagemController {
 	}
 // aqui é onde podemos criar uma pesquisa espesifica no banco , mundando as informações a baixo em chave 
 // e em todo o codigo , de o metotodo ja foi criado é estiver dados nele vc consegue pesquisar aqui .
-	
+
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) {
 		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 
-	// postmapping registra um objeto de postagem criada é envia elas para serem organizadas .
-	// httpstatus create , caso esse postagem tenha sido criada e finalizada ele retorna se deus certo ou errado é o objeto que foi salvo .
+	// postmapping registra um objeto de postagem criada é envia elas para serem
+	// organizadas .
+	// httpstatus create , caso esse postagem tenha sido criada e finalizada ele
+	// retorna se deus certo ou errado é o objeto que foi salvo .
 	@PostMapping
 	public ResponseEntity<Postagem> CadastrarPostagem(@Valid @RequestBody Postagem postagem) {
 
