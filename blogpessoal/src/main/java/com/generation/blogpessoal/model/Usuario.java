@@ -43,7 +43,18 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 
-	/* Insira os Getters and Setters */
+	public Usuario(Long id, String nome, String usuario,String senha,String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+
+	// Insira os Getters and Setters 
+
+	public Usuario() {
+	}
 
 	public Long getId() {
 		return this.id;
@@ -85,11 +96,11 @@ public class Usuario {
 		this.foto = foto;
 	}
 
-	public List<Postagem> getPostagem() {
+	/*public List<Postagem> getPostagem() {
 		return this.postagem;
 	}
 
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
-	}
+	}*/
 }
