@@ -1,11 +1,18 @@
-import { useState } from 'react'
-import './paginas/home/Home.css'
-import Home from './paginas/home/Home'; 
+import React from 'react';
+import Navbar from './components/estaticos/NavBar/navbar';
+import Footer from './components/estaticos/Footer/footer';
+import Home from './paginas/home/Home';
+import'./App.css';
 
-function Home() {
+function App() {
   return (
-    <Home/>
+    <>
+  <Navbar/>
+  <Home/>
+  <Footer/>
+
+    </>
   )
 }
 
-export default Home
+export default App;

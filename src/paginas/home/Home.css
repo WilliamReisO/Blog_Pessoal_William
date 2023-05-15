@@ -1,10 +1,12 @@
-.titulo{
-    color: cornflowerblue;
+.texto {
     text-align: center;
-}
-.img{
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    border: 5px solid cornflowerblue
-}
+  }
+  
+  .alinhamento {
+    display: flex;
+  }
+  
+  .outlinedButton {
+    border-color: #fff !important;
+    color: #fff !important;
+  }
