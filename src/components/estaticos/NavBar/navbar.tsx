@@ -1,54 +1,69 @@
-import React from'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import'./navbar.css'
-function Navbar(){
+import Button from '@mui/material/Button';
+import './navbar.css'
+import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+function Navbar() {
     return (
         <>
-
-                <AppBar position="static" className='navbar' color='transparent'>
-                    <Toolbar variant="dense">
-                        
+            <AppBar position="static" className='navbar' style={{backgroundColor :'orange'}}>
+                <Toolbar variant="dense">
+                    <Grid container spacing={2} justifyContent={'space-between'}>
                         <Box style={{ cursor: "pointer" }} >
-                            <Typography variant="h5" color="inherit">
-                                BlogPessoal
+                            
+                            <Typography variant="h4" color="inherit">
+                                <Link to="/login" >
+                                  <Button variant='outlined' className='outlinedButton'> Blog Pessoal </Button>
+                                </Link>
                             </Typography>
                         </Box>
-    
-                        <Box display="flex" justifyContent="start">
-                            <Box mx={1} style={{ cursor: "pointer" }}>
+
+
+                        <Box display="flex" justifyContent='space-arounde' >
+                            <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit">
-                                    home
+                                    <Link to="/home" >
+                                        <Button variant='outlined' className='outlinedButton'> Home </Button>
+                                    </Link>
                                 </Typography>
                             </Box>
-                            <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit">
-                                    postagens
+                                    <Link to="/Postagens">
+                                        <Button variant='outlined' className='outlinedButton'> Postagens </Button>
+                                    </Link>
                                 </Typography>
                             </Box>
-                            <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit">
-                                    temas
+                                    <Link to="/Temas">
+                                        <Button variant='outlined' className='outlinedButton'> Temas </Button>
+                                    </Link>
                                 </Typography>
                             </Box>
-                            <Box mx={1} style={{ cursor: "pointer" }}>
-                                <Typography variant="h6" color="inherit">
-                                    cadastrar tema
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" marginRight={1}>
+                                    <Link to="/Cadastrar">
+                                    <Button variant='outlined' className='outlinedButton'>Cadastrar Tema</Button>
+                                    </Link>
                                 </Typography>
                             </Box>
-                            <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit">
-                                    logout
+                                    <Link to="/login">
+                                    <Button variant='outlined' className='outlinedButton'> logout </Button>
+                                    </Link>
                                 </Typography>
                             </Box>
                         </Box>
-    
-                        
-                    </Toolbar>
-                </AppBar>
-            </>
-      )
+                    </Grid>
+                </Toolbar>
+            </AppBar>
+        </>
+    )
 }
 export default Navbar;
