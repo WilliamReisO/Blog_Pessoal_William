@@ -1,0 +1,20 @@
+
+  .outlinedButton {
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+  .outlinedButton:hover {
+    border-color: #fff !important;
+    color: #f77f00 !important;
+    background-color: #fff !important;
+  }
+  navbar{
+    background-color: #f77f00;
+  }
+  .cursor{
+    cursor: pointer;
+  }
+  .button{
+
+  }
+ 

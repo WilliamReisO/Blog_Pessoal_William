@@ -1,0 +1,28 @@
+.titulo{
+  color: blue;
+  text-align: center;
+}
+
+.gridconf{
+  direction:row ;
+  justify-content: center;
+  align-items:center;
+  background-color: #fcbf49;
+  min-height:100vh; 
+}
+.button{
+  variant:outlined;
+  border-color: white;
+  background-color: #fcbf49; 
+  color: white ;
+}
+.contained{
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/498918170031597.64572daf1b65d.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
